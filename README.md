@@ -1,5 +1,3 @@
-                                                            Number_Plate_Detection_Of_Vehicl
-Here’s a well-structured `README.md` for your **License Plate Detection and Recognition** project in Google Colab:
 
 ---
 
@@ -76,10 +74,14 @@ Text is cleaned using regex to remove non-alphanumeric characters.
 
 ---
 
-3. Process Images
+### 🖼️ 3. Process Images
+
 Detects license plates from uploaded image files (`.jpg`, `.png`, etc.), overlays bounding boxes and recognized text, and allows download.
 
-4. Process Video
+---
+
+### 🎥 4. Process Video
+
 Processes uploaded video files (`.mp4`, `.avi`, `.mov`) frame by frame:
 
 * Processes every 5th frame for efficiency.
@@ -87,41 +89,66 @@ Processes uploaded video files (`.mp4`, `.avi`, `.mov`) frame by frame:
 * Outputs annotated video for download.
 
 Also provides:
+
 * FPS monitoring
 * Codec fallback handling
 * File size validation
 
-Google Colab Integration
+---
+
+### 📤 Google Colab Integration
+
 * Uses `google.colab.files.upload()` for uploading files.
 * Uses `cv2_imshow()` to display frames.
 * Uses `files.download()` to allow downloading processed results.
 
-Example Workflow
+---
+
+## ✅ Example Workflow
+
 In **Colab**, run the full notebook or execute:
-                      main()
+
+```python
+main()
+```
 
 Then upload either:
+
 * 📷 Image (`.jpg`, `.png`)
 * 🎥 Video (`.mp4`, `.avi`, `.mov`)
 
 Sample Output:
+
+```
 Detected license plate: MH12AB1234
 Video properties: 1280x720 at 30.0 FPS
 Processed 150 frames. FPS: 22.31. Last plate: MH12AB1234
 Output saved as output_video.mp4
+```
 
-Notes
+---
+
+## ⚠️ Notes
+
 * **GPU acceleration** is enabled for OCR (`gpu=True`).
 * Real-time webcam access is not available in Google Colab — use uploaded files.
 * This code uses synthetic frame skipping for performance (every 5th frame).
 * OCR may produce inaccurate results under poor lighting or motion blur.
 * Use higher quality videos/images for better accuracy.
 
-Future Improvements
+---
+
+## 📈 Future Improvements
+
 * Fine-tune plate detection using deep learning (YOLO or SSD).
 * Integrate real-time webcam capture (for local environments).
 * Expand OCR support for multilingual plates.
 * Use tracking algorithms to persist recognition across frames.
 
-License
-     This project is for educational purposes. Dependencies like OpenCV, EasyOCR, and FFmpeg are governed by their respective open-source licenses.
+---
+
+## 📃 License
+
+This project is for educational purposes. Dependencies like OpenCV, EasyOCR, and FFmpeg are governed by their respective open-source licenses.
+
+---
